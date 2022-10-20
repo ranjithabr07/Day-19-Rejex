@@ -10,13 +10,13 @@ switch (num)
 {
     case 1:
         RegexFirstName firstName = new RegexFirstName();
-        bool ValidName = firstName.validateString("Madhu");
+        bool ValidName = firstName.validateString("Ranju");
         Console.WriteLine("{0}", (ValidName) ? "Valid" : "Invalid");
         break;
 
     case 2:
         RegexLastName lastName = new RegexLastName();
-        bool ValidName2 = lastName.validateString("Shivakumar");
+        bool ValidName2 = lastName.validateString("Rajappa");
         Console.WriteLine("{0}", (ValidName2) ? "Valid" : "Invalid");
         break;
 }

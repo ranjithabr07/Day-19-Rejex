@@ -9,7 +9,7 @@ Console.WriteLine("Enter 5 for PassWord Rule1");
 Console.WriteLine("Enter 6 for PassWord Rule2");
 Console.WriteLine("Enter 7 for PassWord Rule3");
 Console.WriteLine("Enter 8 for PassWord Rule4");
-
+Console.WriteLine("Enter 9 for Email samples");
 
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -62,4 +62,28 @@ switch (num)
         bool PassWord4 = regexPassWordRule4.validateString("ABJHFTDfg67@@");
         Console.WriteLine("{0}", (PassWord4) ? "Valid" : "Invalid");
         break;
+
+    case 9:
+        RegexEmailSample emailSample = new RegexEmailSample();
+        List<string> validtests = new List<string>() {"abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" ,
+                                                     "abc","abc@.com.my","abc123@gmail.a","abc123@.com","abc123@.com.com",".abc@abc.com","abc()*@gmail.com","abc@%*.com","abc..2002@gmail.com","abc.@gmail.com","abc@abc@gmail.com","abc@gmail.com.1a","abc@gmail.com.aa.au"};
+
+        foreach (var test in validtests)
+        {
+            bool result = emailSample.validateString(test);
+            if (result)
+            {
+                Console.WriteLine("\n{0} is a valid email address", test);
+            }
+            else
+            {
+                Console.WriteLine("\n{0} is an invalid email address", test);
+            }
+        }
+        break;
+
+    default:
+        Console.WriteLine("Enter a  valid number");
+        break;
+
 }

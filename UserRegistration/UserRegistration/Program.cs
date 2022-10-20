@@ -8,6 +8,8 @@ Console.WriteLine("Enter 4 for Mobile number");
 Console.WriteLine("Enter 5 for PassWord Rule1");
 Console.WriteLine("Enter 6 for PassWord Rule2");
 Console.WriteLine("Enter 7 for PassWord Rule3");
+Console.WriteLine("Enter 8 for PassWord Rule4");
+
 
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -53,5 +55,11 @@ switch (num)
         RegexPassWordRule3 regexPassWordRule3 = new RegexPassWordRule3();
         bool PassWord3 = regexPassWordRule3.validateString("ABJHFTDfg67");
         Console.WriteLine("{0}", (PassWord3) ? "Valid" : "Invalid");
+        break;
+
+    case 8:
+        RegexPassWordRule4 regexPassWordRule4 = new RegexPassWordRule4();
+        bool PassWord4 = regexPassWordRule4.validateString("ABJHFTDfg67@@");
+        Console.WriteLine("{0}", (PassWord4) ? "Valid" : "Invalid");
         break;
 }

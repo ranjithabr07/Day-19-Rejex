@@ -5,6 +5,7 @@ Console.WriteLine("Enter 1 for First Name");
 Console.WriteLine("Enter 2 for Last Name");
 Console.WriteLine("Enter 3 for Email");
 Console.WriteLine("Enter 4 for Mobile number");
+Console.WriteLine("Enter 5 for PassWord Rule1");
 
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -32,5 +33,11 @@ switch (num)
         RegexMobileNumber regexMobileNumber = new RegexMobileNumber();
         bool Number1 = regexMobileNumber.validateString("91 9919819801");
         Console.WriteLine("{0}", (Number1) ? "Valid" : "Invalid");
+        break;
+
+    case 5:
+        RegexPassWordRule1 regexPassWordRule1 = new RegexPassWordRule1();
+        bool PassWord1 = regexPassWordRule1.validateString("abcdefg1d");
+        Console.WriteLine("{0}", (PassWord1) ? "Valid" : "Invalid");
         break;
 }
